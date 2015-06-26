@@ -1,0 +1,42 @@
+<ion-view view-title="Menu">
+<ion-nav-buttons side="right">
+      <button class="button button-clear ion-android-cart" ng-click="doSomething()">
+      </button>
+</ion-nav-buttons>
+<ion-content>
+  <div class="list card">
+    <a 
+    href="#/app/restaurantMap/{{restaurant.id}}"
+    class="item item-thumbnail-left">
+    <img ng-src="{{restaurant.image}}">
+    <h2>{{restaurant.name}}</h2>
+    <p>{{restaurant.foodtype}}</p>
+    <p>{{restaurant.address}}</p>
+    <p>Telefonos: {{restaurant.phone}}</p>
+    <p>{{restaurant.schedule}}</p>
+    </a>
+  </div>
+
+<ion-list>
+    <ion-item class="item-thumbnail-right" collection-repeat="menu in restaurant.menu | filter:searchQuery" type="item-text-wrap">
+        <img ng-src="{{menu.image}}">
+        <h2>{{menu.service}}</h2>
+        <p>Bs {{menu.price}}</p>
+        <p>{{menu.description}}</p>
+        <ion-option-button class="button-balanced">Añadir</ion-option-button>
+        <ion-option-button class="button-assertive">Eliminar</ion-option-button>
+    </ion-item>
+</ion-list>
+</ion-content>
+
+<ion-footer-bar align-title="left" class="bar-assertive">
+  <div class="buttons" ng-click="doSomething()">
+    <button class="button">Bs. 0.00</button>
+  </div>
+  <h1 class="title">Confirmar pedido</h1>
+  <div class="buttons" ng-click="doSomething()">
+    <button class="button">Cantidad: 0</button>
+  </div>
+</ion-footer-bar>
+</ion-view>
+

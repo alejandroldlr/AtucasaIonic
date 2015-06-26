@@ -1,0 +1,16 @@
+<ion-view view-title="Mapa">
+	<ion-content>
+		<div class="list card">
+			<a class="item item-thumbnail-left">
+				<img ng-src="{{restaurant.image}}">
+				<h2>{{restaurant.name}}</h2>
+				<p>{{restaurant.foodtype}}</p>
+				<p>{{restaurant.address}}</p>
+				<p>Telefonos: {{restaurant.phone}}</p>
+				<p>{{restaurant.schedule}}</p>
+		    </a>
+		</div>
+		<div id="rest_map" class="map" data-tap-disabled="true"></div> 
+	</ion-content>
+</ion-view>
+
