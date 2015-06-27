@@ -14,6 +14,9 @@ Framework: Ionic
    cordova-plugin-geolocation
    cordova-plugin-whitelist
    cordova-sqlite-storage
+   com.ionic.keyboard
+   cordova-plugin-console
+   cordova-plugin-device
 
 ------------------------------------------   
 3. Librerias utilizadas:
